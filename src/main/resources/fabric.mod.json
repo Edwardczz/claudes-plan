@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "claudesplan",
+	"version": "${version}",
+	"name": "ClaudesPlan",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/claudesplan/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.claudesplan.ClaudesPlan"
+		],
+		"client": [
+			"com.example.claudesplan.client.ClaudesPlanClient"
+		]
+	},
+	"mixins": [
+		"claudesplan.mixins.json",
+		{
+			"config": "claudesplan.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
